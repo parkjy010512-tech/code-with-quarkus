@@ -7,7 +7,9 @@
 
 
     <!-- Bootstrap 5 CDN -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+     <script src="css/bootstrap.min.css"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/test.js"></script>
     
@@ -16,20 +18,7 @@ window.onload = function() {
 alert("메인 페이지 로딩 완료");
 }</script>
     
-    <!-- 커스텀 스타일 (LOL 테마 + 챔피언 호버 효과) -->
-    <style>
-        body { background-color: #0a0e17; color: #fff; font-family: 'Arial', sans-serif; }
-        .navbar { background-color: #000; }
-        .hero { background: linear-gradient(to bottom, #1e1e1e, #0a0e17); min-height: 60vh; }
-        .accent-purple { color: #a020f0; }
-        .accent-red { color: #ff0000; }
-        .card { background-color: #1e1e1e; border: none; transition: transform 0.3s, box-shadow 0.3s; }
-        .card:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(160, 32, 240, 0.5); }
-        .card-img-top { height: 200px; object-fit: cover; border-radius: 10px 10px 0 0; }
-        .btn-primary { background-color: #a020f0; border: none; }
-        .btn-primary:hover { background-color: #800080; }
-        
-    </style>
+
 </head>
 <body>
  <!-- 헤더 (Navbar) -->
@@ -179,10 +168,33 @@ allowfullscreen>
                     <img src="images/추적자.webp" class="card-img-top" alt="Sylas" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title accent-purple">추적자</h5>
-                        <p class="card-text">밤의 왕을 계속 쫓는 청년.육감이 뛰어나며 수많은 사선을 헤쳐온 검사.멸망한 일족의 설욕을 위해, 밤을 달린다</p>
+                        <p class="card-text">밤의 왕을 계속 쫓는 청년.육감이 뛰어나며 수많은 사선을 헤쳐온 검사</p>
                     </div>
                 </div>
             </div>
+ <!-- 버튼 -->
+
+<div class="modal fade" id="modal-chujukja" tabindex="-1" aria-labelledby="modal-chujukjaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white border-secondary">
+      <div class="modal-header border-secondary">
+        <h5 class="modal-title" id="modal-chujukjaLabel">추적자 상세정보</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0" style="height: 65vh; background: #0a0e17;">
+        <iframe src="modals/추적자.html"
+                title="추적자 상세정보"
+                frameborder="0"
+                style="width:100%; height:100%; border:none;"
+                allowfullscreen>
+        </iframe>
+      </div>
+      <div class="modal-footer border-secondary">
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
+</div>
             <!-- Anivia -->
             <div class="col-md-6 col-lg-4 col-xl-2">
                 <div class="card text-center h-100">
@@ -193,6 +205,7 @@ allowfullscreen>
                     </div>
                 </div>
             </div>
+
             <!-- Briar -->
             <div class="col-md-6 col-lg-4 col-xl-2">
                 <div class="card text-center h-100">
@@ -318,15 +331,8 @@ allowfullscreen>
 </div>
 </div>
 </div>
+
 </section>
-<!-- index.html -->
-<input id="searchInput" type="search" placeholder="검색어를 입력하세요" />
-<button id="searchBtn">검색</button>
-
-<section id="mainSection">메인 화면 내용</section>
-<section id="resultsSection" style="display:none">검색 결과 영역</section>
-
-<script src="app.js"></script>
 
     <script src="js/search.js"></script>
     
