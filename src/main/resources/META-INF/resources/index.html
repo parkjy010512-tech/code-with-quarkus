@@ -12,6 +12,7 @@
      <script src="css/bootstrap.min.css"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/test.js"></script>
+    <script src="js/test2.js"></script>
     
         <script>
 window.onload = function() {
@@ -42,7 +43,10 @@ alert("메인 페이지 로딩 완료");
 
     <nav class="navbar bg-dark border-bottom border-body " data-bs-theme="dark">
 <div class="container-fluid">
-  <a class="navbar-brand" href="#">League of Legends</a>
+  <img src="/images/LOL.webp" alt="" width="30" height="24">
+<!-- [변경] "Navbar" 텍스트 → 다크/라이트 토글 버튼-->
+<button class="btn border-0" id="themeToggleBtn" onclick="toggleTheme()">DARK</button>
+
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -174,27 +178,8 @@ allowfullscreen>
             </div>
  <!-- 버튼 -->
 
-<div class="modal fade" id="modal-chujukja" tabindex="-1" aria-labelledby="modal-chujukjaLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content bg-dark text-white border-secondary">
-      <div class="modal-header border-secondary">
-        <h5 class="modal-title" id="modal-chujukjaLabel">추적자 상세정보</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-0" style="height: 65vh; background: #0a0e17;">
-        <iframe src="modals/추적자.html"
-                title="추적자 상세정보"
-                frameborder="0"
-                style="width:100%; height:100%; border:none;"
-                allowfullscreen>
-        </iframe>
-      </div>
-      <div class="modal-footer border-secondary">
-        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">닫기</button>
-      </div>
-    </div>
-  </div>
-</div>
+  
+
             <!-- Anivia -->
             <div class="col-md-6 col-lg-4 col-xl-2">
                 <div class="card text-center h-100">
